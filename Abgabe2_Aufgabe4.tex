@@ -1,0 +1,12 @@
+\section{Laufzeitanalyse}
+\subsection{Bestimmung in Abhängigkeit von n die Best-case Laufzeit $B(n)$}
+Die Best-case Laufzeit ist $B(n)=1+2n$.
+\subsection{Bestimmung in Abhängigkeit von n die Worst-case Laufzeit $W(n)$}
+Die Worst-case Laufzeit ist $W(n)=1+3n$.
+\subsection{Bestimmung in Abhängigkeit von n der Average-case Laufzeit $A(n)$}
+Die Average-case Laufzeit ist $A(n)=\sum\nolimits_{i=0}^n \frac{n!}{i!} \cdot 0.5^2 \cdot (1-0.5)^{n-i}$
+\subsection{Äquivalenter Algorithmus mit besserer Average-case Laufzeit}
+Der folgende äquivalenter Algorithmus hat eine besser Average-case Laufzeit ab $n>2$, da er nur einmal am Ende abfragt, ob m gleich 0 ist, anstatt bei jedem Element des Arrays, welches true ist. Somit spart man für jedes Element welches true enthält einen Durchlauf und nur im relativ unwahrscheinlichen Fall, wenn alle Elemente im Array false sind braucht er einen mehr.
+\lstinputlisting{BessereLaufzeit.java}
+\subsection{Äquivalenter Algorithmus, dessen Worst-case Laufzeit in o(n) liegt}
+Nein, gibt es nicht
